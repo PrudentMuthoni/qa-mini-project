@@ -22,16 +22,16 @@ describe('filling out the fields in the form', () => {
 
     cy.get('#country').select('United Kingdom');
 
-    // cy.get('#country').should('have.value', 'UK');
+    
 
     cy.get('#male').check();
     cy.get('#male').should('be.checked');
 
-    // 6. Upload a file using the guaranteed default fixture file
+    
     const fileName = 'example.json';
     cy.get('#singleFileInput').selectFile(`cypress/fixtures/${fileName}`);
 
-    // 7. Scroll to the bottom of the page to bypass missing element errors
+    
     cy.scrollTo('bottom');
 
 
